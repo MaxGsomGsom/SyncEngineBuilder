@@ -1,0 +1,48 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:EngineBuilder" x:Class="EngineBuilder.MainWindow"
+        Title="EngineBuilder" Height="500" Width="750" Loaded="Window_Loaded_1" WindowStartupLocation="CenterScreen"
+            ResizeMode="CanMinimize">
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Menu Width="Auto" Grid.Row="0" VerticalAlignment="Top" Margin="0 0 0 5">
+            <MenuItem Header="Файл" >
+                <MenuItem Header="Открыть" Click="MenuItem_Open"/>
+                <MenuItem Header="Сохранить" Click="MenuItem_SaveAs"/>
+                <Separator/>
+                <MenuItem Header="Сбросить параметры" Click="Window_Loaded_1"/>
+            </MenuItem>
+            <MenuItem Header="Сервис">
+                <MenuItem Header="Построить модель" Click="MenuItem_Build"/>
+                <Separator/>
+                <MenuItem Header="Показать все параметры" Click="MenuItem_ViewParameters"/>
+                <Separator/>
+                <MenuItem Header="Разрешить любые значения параметров" Click="MenuItem_Unsafe_Mode" x:Name="unsafeMenu"/>
+                <MenuItem Header="Строить только ротор" Click="MenuItem_onlyRotor" x:Name="OnlyRotorMenu"/>
+            </MenuItem>
+            <MenuItem Header="Помощь" Click="MenuItem_Click_1" />
+        </Menu>
+
+        <!--
+        <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left" Height="192" Margin="101,34,0,0" Grid.Row="1" VerticalAlignment="Top" Width="253">
+        </Frame>
+        -->
+        
+        <Viewbox x:Name="viewboxMain" Grid.Row="1" Width="650" Margin="10" VerticalAlignment="Top"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="btn_Previous" Content="Назад" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Bottom" Width="75"  Click="Button_Click_Previous"/>
+            <Button x:Name="btn_Next" Content="Далее"  HorizontalAlignment="Right" Margin="5" VerticalAlignment="Bottom" Width="75"  Click="Button_Click_Next"/>
+            <Button x:Name="btn_Build" Content="Построить" HorizontalAlignment="Right" Margin="5,0,5,5" VerticalAlignment="Bottom" Width="75" Click="MenuItem_Build" IsEnabled="False"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

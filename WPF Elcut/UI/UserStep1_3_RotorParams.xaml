@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="EngineBuilder.UserStep1_3_RotorParams"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="400" Width="650">
+    <Grid x:Name="user1_1" Margin="0" Width="Auto" Height="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="10" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Top" Height="19"><Run Language="ru-ru" Text="Шаг 1-3. Параметры ротора"/><LineBreak/><Run Language="ru-ru"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+
+        <Grid Grid.Row="1" UseLayoutRounding="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="68*"/>
+                <ColumnDefinition Width="57*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">СООТНОШЕНИЕ_ДЛИНЫ_К_ДИАМЕТРУ_МАГНИТА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_ЗАПАСА_НА_ИСПОЛЬЗОВАНИЕ_МАГНИТА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_ПОЛЮСНОГО_ПЕРЕКРЫТИЯ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ВЫСОТА_БАШМАКА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ОБМОТОЧНЫЙ_КОЭФФИЦИЕНТ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="5" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_ДИАМЕТРА_ВТУЛКИ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">СООТНОШЕНИЕ_ШИРИНЫ_БАШМАКА_К_ПОЛЮСУ</TextBlock>
+
+            <TextBox x:Name="СООТНОШЕНИЕ_ДЛИНЫ_К_ДИАМЕТРУ_МАГНИТАTextBox" Grid.Column="1" Grid.Row="0" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"/>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_ЗАПАСА_НА_ИСПОЛЬЗОВАНИЕ_МАГНИТАTextBox" Grid.Column="1" Grid.Row="1" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_ПОЛЮСНОГО_ПЕРЕКРЫТИЯTextBox" Grid.Column="1" Grid.Row="2" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ВЫСОТА_БАШМАКАTextBox" Grid.Column="1" Grid.Row="3" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ОБМОТОЧНЫЙ_КОЭФФИЦИЕНТTextBox" Grid.Column="1" Grid.Row="4" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_ДИАМЕТРА_ВТУЛКИTextBox" Grid.Column="1" Grid.Row="5" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="СООТНОШЕНИЕ_ШИРИНЫ_БАШМАКА_К_ПОЛЮСУTextBox" Grid.Column="1" Grid.Row="6" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+
+            <Slider x:Name="СООТНОШЕНИЕ_ДЛИНЫ_К_ДИАМЕТРУ_МАГНИТАSlider" Grid.Column="2" Grid.Row="0" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"/>
+            <Slider x:Name="КОЭФФИЦИЕНТ_ЗАПАСА_НА_ИСПОЛЬЗОВАНИЕ_МАГНИТАSlider" Grid.Column="2" Grid.Row="1" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="КОЭФФИЦИЕНТ_ПОЛЮСНОГО_ПЕРЕКРЫТИЯSlider" Grid.Column="2" Grid.Row="2" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ВЫСОТА_БАШМАКАSlider" Grid.Column="2" Grid.Row="3" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ОБМОТОЧНЫЙ_КОЭФФИЦИЕНТSlider" Grid.Column="2" Grid.Row="4" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="КОЭФФИЦИЕНТ_ДИАМЕТРА_ВТУЛКИSlider" Grid.Column="2" Grid.Row="5" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="СООТНОШЕНИЕ_ШИРИНЫ_БАШМАКА_К_ПОЛЮСУSlider" Grid.Column="2" Grid.Row="6" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            
+        </Grid>
+    </Grid>
+</UserControl>

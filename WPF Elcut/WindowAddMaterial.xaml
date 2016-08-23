@@ -1,0 +1,36 @@
+﻿<Window x:Class="EngineBuilder.WindowAddMaterial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowAddMaterial" WindowStartupLocation="CenterScreen"
+            ResizeMode="CanMinimize" Width="280" Height="499">
+    <Grid HorizontalAlignment="Left" Height="474" VerticalAlignment="Top" Width="265" Margin="0,0,-3,-3">
+
+        <GroupBox Header="Магнитная проницаемость" HorizontalAlignment="Left" Margin="5,6,0,0" VerticalAlignment="Top" Height="298" Width="250">
+            <Grid Height="280" VerticalAlignment="Top" Margin="0,0,0,-4" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="muX" HorizontalAlignment="Left" Height="23" Margin="100,64,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="muY" HorizontalAlignment="Left" Height="23" Margin="100,92,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+                <TextBlock HorizontalAlignment="Left" Margin="24,67,0,0" TextWrapping="Wrap" Text="muX" VerticalAlignment="Top" Height="16" Width="34"/>
+                <TextBlock HorizontalAlignment="Left" Margin="24,94,0,0" TextWrapping="Wrap" Text="muY" VerticalAlignment="Top" Height="16" Width="35"/>
+                <CheckBox x:Name="nonLinear" Content="Нелинейная" HorizontalAlignment="Left" Margin="24,39,0,0" VerticalAlignment="Top" Width="113" Height="16" Click="nonLinear_Checked_1"/>
+                <DataGrid HorizontalAlignment="Left" Margin="24,132,0,0" VerticalAlignment="Top" Height="130" Width="196" x:Name="dataGrid1"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="100,8,0,0" TextWrapping="Wrap" Text="Материал1" VerticalAlignment="Top" Width="120" x:Name="mat"/>
+                <TextBlock HorizontalAlignment="Left" Margin="24,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="53"><Run Language="ru-ru" Text="Название"/></TextBlock>
+            </Grid>
+        </GroupBox>
+        <Button Content="ОК" HorizontalAlignment="Left" Margin="77,431,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click_1"/>
+        <GroupBox Header="Коэрцитивная сила" HorizontalAlignment="Left" Margin="5,0,0,58" VerticalAlignment="Bottom" Height="106" Width="250">
+            <Grid Margin="0,0,0,0">
+                <TextBox x:Name="magneticPower" HorizontalAlignment="Left" Height="23" Margin="90,14,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="74"/>
+                <TextBox x:Name="magneticPowerAngle" HorizontalAlignment="Left" Height="23" Margin="90,46,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Значение"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Margin="10,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Угол (рад)"/></TextBlock>
+
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>

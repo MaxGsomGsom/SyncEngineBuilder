@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="EngineBuilder.UserStep2_8_RegulatorsCalc"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="400" Width="650">
+    <Grid x:Name="user1_1" Margin="0" Width="Auto" Height="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="10" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Top" Height="19"><Run Language="ru-ru" Text="Шаг 2-8. Расчет регуляторов"/><LineBreak/><Run Language="ru-ru"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+
+        <Grid Grid.Row="1" UseLayoutRounding="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="68*"/>
+                <ColumnDefinition Width="57*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">СОПРОТИВЛЕНИЕ_ОБМОТКИ_СТАТОРА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ПРОПОРЦИОНАЛЬНЫЙ_КОЭФФИЦИЕНТ_ТОКА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ИНТЕГРАЛЬНЫЙ_КОЭФФИЦИЕНТ_ТОКА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ПОСТОЯННАЯ_ВРЕМЕНИ_КОНТУРА_СКОРОСТИ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ПРОПОРЦИОНАЛЬНЫЙ_КОЭФФИЦИЕНТ_СКОРОСТИ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="5" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ИНТЕГРАЛЬНЫЙ_КОЭФФИЦИЕНТ_СКОРОСТИ</TextBlock>
+
+            <TextBox x:Name="СОПРОТИВЛЕНИЕ_ОБМОТКИ_СТАТОРАTextBox" Grid.Column="1" Grid.Row="0" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"/>
+            <TextBox x:Name="ПРОПОРЦИОНАЛЬНЫЙ_КОЭФФИЦИЕНТ_ТОКАTextBox" Grid.Column="1" Grid.Row="1" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ИНТЕГРАЛЬНЫЙ_КОЭФФИЦИЕНТ_ТОКАTextBox" Grid.Column="1" Grid.Row="2" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ПОСТОЯННАЯ_ВРЕМЕНИ_КОНТУРА_СКОРОСТИTextBox" Grid.Column="1" Grid.Row="3" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ПРОПОРЦИОНАЛЬНЫЙ_КОЭФФИЦИЕНТ_СКОРОСТИTextBox" Grid.Column="1" Grid.Row="4" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ИНТЕГРАЛЬНЫЙ_КОЭФФИЦИЕНТ_СКОРОСТИTextBox" Grid.Column="1" Grid.Row="5" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+
+            <!--
+            <Slider x:Name="ШИРИНА_ПАЗА_МИНSlider" Grid.Column="2" Grid.Row="0" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"/>
+            <Slider x:Name="ВЫСОТА_СПИНКИ_СТАТОРАSlider" Grid.Column="2" Grid.Row="1" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ШИРИНА_ПАЗА_СРЕДSlider" Grid.Column="2" Grid.Row="2" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ШИРИНА_ПАЗА_МАКСSlider" Grid.Column="2" Grid.Row="3" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ВЫСОТА_ПАЗАSlider" Grid.Column="2" Grid.Row="4" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ДИАМЕТР_СТАТОРА_С_ПАЗАМИSlider" Grid.Column="2" Grid.Row="5" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ВНЕШНИЙ_ДИАМЕТР_СТАТОРАSlider" Grid.Column="2" Grid.Row="6" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            -->
+            
+        </Grid>
+    </Grid>
+</UserControl>

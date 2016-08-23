@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D573F1B-F8DB-41FC-8C1E-60197A0454E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EngineBuilder</RootNamespace>
+    <AssemblyName>EngineBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.ELCUT">
+      <HintPath>..\..\EngineModel_3phase_2016.08.23\InterfaceELCUT\Interop.ELCUT.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Entities\Elcut.cs" />
+    <Compile Include="Entities\Engine.cs" />
+    <Compile Include="Entities\Hints.cs" />
+    <Compile Include="Entities\Material.cs" />
+    <Compile Include="Entities\Parameter.cs" />
+    <Compile Include="UI\UserStep1_1_MainParams.xaml.cs">
+      <DependentUpon>UserStep1_1_MainParams.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep1_2_RotorParams.xaml.cs">
+      <DependentUpon>UserStep1_2_RotorParams.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep1_4_StatorParams.xaml.cs">
+      <DependentUpon>UserStep1_4_StatorParams.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep1_3_RotorParams.xaml.cs">
+      <DependentUpon>UserStep1_3_RotorParams.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep2_1_MainCalc.xaml.cs">
+      <DependentUpon>UserStep2_1_MainCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep2_2_RotorCalc.xaml.cs">
+      <DependentUpon>UserStep2_2_RotorCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep2_3_RotorCalc.xaml.cs">
+      <DependentUpon>UserStep2_3_RotorCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep2_4_StatorCalc.xaml.cs">
+      <DependentUpon>UserStep2_4_StatorCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep2_5_StatorCalc.xaml.cs">
+      <DependentUpon>UserStep2_5_StatorCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep2_6_StatorCalc.xaml.cs">
+      <DependentUpon>UserStep2_6_StatorCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep1_5_StatorParams.xaml.cs">
+      <DependentUpon>UserStep1_5_StatorParams.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep1_6_Materials.xaml.cs">
+      <DependentUpon>UserStep1_6_Materials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep1_7_RegulatorsParams.xaml.cs">
+      <DependentUpon>UserStep1_7_RegulatorsParams.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep2_7_RegulatorsCalc.xaml.cs">
+      <DependentUpon>UserStep2_7_RegulatorsCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserStep2_8_RegulatorsCalc.xaml.cs">
+      <DependentUpon>UserStep2_8_RegulatorsCalc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowAddMaterial.xaml.cs">
+      <DependentUpon>WindowAddMaterial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowElcutProgress.xaml.cs">
+      <DependentUpon>WindowElcutProgress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowEngineParameters.xaml.cs">
+      <DependentUpon>WindowEngineParameters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowHelp.xaml.cs">
+      <DependentUpon>WindowHelp.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UI\UserStep1_1_MainParams.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserStep1_2_RotorParams.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserStep1_4_StatorParams.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserStep1_3_RotorParams.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserStep2_1_MainCalc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserStep2_2_RotorCalc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserStep2_3_RotorCalc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserStep2_4_StatorCalc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserStep2_5_StatorCalc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UserStep2_6_StatorCalc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserStep1_5_StatorParams.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserStep1_6_Materials.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserStep1_7_RegulatorsParams.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserStep2_7_RegulatorsCalc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\UserStep2_8_RegulatorsCalc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WindowAddMaterial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowElcutProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowEngineParameters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowHelp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XMLEngine.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imgs\Test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Help.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Help.files\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

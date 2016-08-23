@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="EngineBuilder.UserStep1_2_RotorParams"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="400" Width="650">
+    <Grid x:Name="user1_1" Margin="0" Width="Auto" Height="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="10" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Top" Height="19"><Run Language="ru-ru" Text="Шаг 1-2. Параметры ротора"/><LineBreak/><Run Language="ru-ru"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+
+        <Grid Grid.Row="1" UseLayoutRounding="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="68*"/>
+                <ColumnDefinition Width="57*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_ИНДУКЦИИ_ПРИ_ХОЛОСТОМ_ХОДЕ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_НАПРЯЖЕННОСТИ_МАГНИТНОГО_ПОЛЯ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_РАССЕИВАНИЯ_ХОЛОСТОГО_ХОДА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_ПАДЕНИЯ_МАГНИТНОГО_НАПРЯЖЕНИЯ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_ПРИВЕДЕНИЯ_МДС_РЕАКЦИИ_ЯКОРЯ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="5" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_УДАРНОСТИ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_ФОРМЫ_ПОЛЯ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КРАТНОСТЬ_ТОКА_КЗ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="8" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">КОЭФФИЦИЕНТ_ЗАПОЛНЕНИЯ_МАГНИТА</TextBlock>
+
+
+            <TextBox x:Name="КОЭФФИЦИЕНТ_ИНДУКЦИИ_ПРИ_ХОЛОСТОМ_ХОДЕTextBox" Grid.Column="1" Grid.Row="0" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"/>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_НАПРЯЖЕННОСТИ_МАГНИТНОГО_ПОЛЯTextBox" Grid.Column="1" Grid.Row="1" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_РАССЕИВАНИЯ_ХОЛОСТОГО_ХОДАTextBox" Grid.Column="1" Grid.Row="2" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_ПАДЕНИЯ_МАГНИТНОГО_НАПРЯЖЕНИЯTextBox" Grid.Column="1" Grid.Row="3" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_ПРИВЕДЕНИЯ_МДС_РЕАКЦИИ_ЯКОРЯTextBox" Grid.Column="1" Grid.Row="4" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_УДАРНОСТИTextBox" Grid.Column="1" Grid.Row="5" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_ФОРМЫ_ПОЛЯTextBox" Grid.Column="1" Grid.Row="6" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="КРАТНОСТЬ_ТОКА_КЗTextBox" Grid.Column="1" Grid.Row="7" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="КОЭФФИЦИЕНТ_ЗАПОЛНЕНИЯ_МАГНИТАTextBox" Grid.Column="1" Grid.Row="8" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+
+            <Slider x:Name="КОЭФФИЦИЕНТ_ИНДУКЦИИ_ПРИ_ХОЛОСТОМ_ХОДЕSlider" Grid.Column="2" Grid.Row="0" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"/>
+            <Slider x:Name="КОЭФФИЦИЕНТ_НАПРЯЖЕННОСТИ_МАГНИТНОГО_ПОЛЯSlider" Grid.Column="2" Grid.Row="1" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="КОЭФФИЦИЕНТ_РАССЕИВАНИЯ_ХОЛОСТОГО_ХОДАSlider" Grid.Column="2" Grid.Row="2" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="КОЭФФИЦИЕНТ_ПАДЕНИЯ_МАГНИТНОГО_НАПРЯЖЕНИЯSlider" Grid.Column="2" Grid.Row="3" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="КОЭФФИЦИЕНТ_ПРИВЕДЕНИЯ_МДС_РЕАКЦИИ_ЯКОРЯSlider" Grid.Column="2" Grid.Row="4" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="КОЭФФИЦИЕНТ_УДАРНОСТИSlider" Grid.Column="2" Grid.Row="5" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="КОЭФФИЦИЕНТ_ФОРМЫ_ПОЛЯSlider" Grid.Column="2" Grid.Row="6" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="КРАТНОСТЬ_ТОКА_КЗSlider" Grid.Column="2" Grid.Row="7" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="КОЭФФИЦИЕНТ_ЗАПОЛНЕНИЯ_МАГНИТАSlider" Grid.Column="2" Grid.Row="8" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+
+        </Grid>
+    </Grid>
+</UserControl>
+

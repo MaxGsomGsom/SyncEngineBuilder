@@ -1,0 +1,9 @@
+﻿<Window x:Class="EngineBuilder.WindowHelp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowHelp" Height="446" Width="653.5" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" MouseWheel="Window_MouseWheel_1">
+    <Grid>
+        <WebBrowser Margin="0,0,0,0" x:Name="Browser" />
+
+    </Grid>
+</Window>

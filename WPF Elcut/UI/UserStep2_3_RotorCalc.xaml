@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="EngineBuilder.UserStep2_3_RotorCalc"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="400" Width="650">
+    <Grid x:Name="user1_1" Margin="0" Width="Auto" Height="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="10" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Top" Height="19"><Run Language="ru-ru" Text="Шаг 2-3. Расчет ротора"/><LineBreak/><Run Language="ru-ru"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+
+        <Grid Grid.Row="1" UseLayoutRounding="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="68*"/>
+                <ColumnDefinition Width="57*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ДЛИНА_ДУГИ_ПОЛЮСНОГО_БАШМАКА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ШИРИНА_ПОЛЮСНОЙ_ДУГИ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ШИРИНА_МАГНИТА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ПЛОЩАДЬ_СЕЧЕНИЯ_МАГНИТА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ЛИНЕЙНАЯ_НАГРУЗКА_НА_МАГНИТ</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="5" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ВЫСОТА_МАГНИТА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ВНУТРЕННИЙ_ДИАМЕТР_МАГНИТА</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" TextWrapping="Wrap" MouseLeave="TextBlock_MouseLeave"  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Cursor="Help">ДИАМЕТР_ВТУЛКИ</TextBlock>
+
+            <TextBox x:Name="ДЛИНА_ДУГИ_ПОЛЮСНОГО_БАШМАКАTextBox" Grid.Column="1" Grid.Row="0" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"/>
+            <TextBox x:Name="ШИРИНА_ПОЛЮСНОЙ_ДУГИTextBox" Grid.Column="1" Grid.Row="1" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ШИРИНА_МАГНИТАTextBox" Grid.Column="1" Grid.Row="2" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ПЛОЩАДЬ_СЕЧЕНИЯ_МАГНИТАTextBox" Grid.Column="1" Grid.Row="3" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ЛИНЕЙНАЯ_НАГРУЗКА_НА_МАГНИТTextBox" Grid.Column="1" Grid.Row="4" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ВЫСОТА_МАГНИТАTextBox" Grid.Column="1" Grid.Row="5" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ВНУТРЕННИЙ_ДИАМЕТР_МАГНИТАTextBox" Grid.Column="1" Grid.Row="6" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            <TextBox x:Name="ДИАМЕТР_ВТУЛКИTextBox" Grid.Column="1" Grid.Row="7" Margin="5" LostFocus="TextBox_ValueChanged" Initialized="TextBox_Initialized"></TextBox>
+            
+            <!--
+            <Slider x:Name="ПОЛЮСНОЕ_ДЕЛЕНИЕ_РОТОРА_ПО_МАГНИТУSlider" Grid.Column="2" Grid.Row="0" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"/>
+            <Slider x:Name="ШИРИНА_ПОЛЮСНОЙ_ДУГИSlider" Grid.Column="2" Grid.Row="1" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ШИРИНА_МАГНИТАSlider" Grid.Column="2" Grid.Row="2" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ПЛОЩАДЬ_СЕЧЕНИЯ_МАГНИТАSlider" Grid.Column="2" Grid.Row="3" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ЛИНЕЙНАЯ_НАГРУЗКА_НА_МАГНИТSlider" Grid.Column="2" Grid.Row="4" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ВЫСОТА_МАГНИТАSlider" Grid.Column="2" Grid.Row="5" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            <Slider x:Name="ВНУТРЕННИЙ_ДИАМЕТР_МАГНИТАSlider" Grid.Column="2" Grid.Row="6" Margin="5" ValueChanged="Slider_ValueChanged" Initialized="Slider_Initialized"></Slider>
+            -->
+            
+        </Grid>
+    </Grid>
+</UserControl>
